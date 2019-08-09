@@ -1,26 +1,47 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import SearchForm from './SearchForm';
+import SearchResults from './SearchResults';
+import ErrorMessage from './ErrorMessage'
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends React.Component {
+
+  state = {
+    results: [],
+    loading: false,
+    searched: false
+  };
+
+  logResults = (newResults) => {
+    this.setState({
+      results: newResults,
+      loading: false,
+      searched: true
+    })
+  }
+
+  setLoading = () => {
+    this.setState({
+      loading: true
+    })
+  }
+
+  render() {
+    return (
+    <main className='App'>
+      <ErrorMessage>
+        <header>
+          <h1>Star Wars Search</h1>
+          <SearchForm logResults={this.logResults} setLoading={this.setLoading}/>
+        </header>
+        <section>
+          <ul>
+            <SearchResults results={this.state.results} loading={this.state.loading} searched={this.state.searched} />
+          </ul>        
+        </section>
+      </ErrorMessage>      
+    </main>
+    );
+  }
 }
 
 export default App;

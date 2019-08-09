@@ -11,3 +11,70 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
+ul {
+  padding: 20px;
+  margin: 0px;
+}
+
+li {
+  list-style-type: none;
+  font-family: 'Anton', sans-serif;
+  color: gold;
+  text-align: center;
+  line-height: 45px;
+  font-size: 25px;
+}
+
+input {
+  margin-right: 20px;
+  font-size: 25px;
+}
+
+select {
+  margin-right: 20px;
+  font-size: 25px;
+}
+
+h1 {
+  text-align: center;
+  color: gold;
+  font-family: 'Londrina Outline', cursive;
+  font-size: 75px;
+}
+
+h2 {
+  list-style-type: none;
+  font-family: 'Anton', sans-serif;
+  color: gold;
+  text-align: center;
+  line-height: 45px;
+  font-size: 25px;
+}
+
+form {
+  text-align: center;
+}
+
+label {
+  color: gold;
+  font-family: 'Anton', sans-serif;
+  font-size: 25px;
+}
+
+html {
+  background-image: url('https://images.pexels.com/photos/1341279/pexels-photo-1341279.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260');
+}
+
+button {
+  background-color: black;
+  color: gold;
+  border: 1px solid gold;
+  font-family: 'Anton', sans-serif;
+  font-size: 25px;
+}
+
+header {
+  padding: 15px;
+  margin-top: 0px;
+}
